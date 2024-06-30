@@ -11,14 +11,18 @@
     <title></title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
- 
-    <script>
+  <script>
+      var outMessage = "@ViewBag.Message";
+      if (outMessage != "") 
+          alert(outMessage)
+      
         function ValidateInput() {
             if (document.getElementById('TxtUserName').value = "" || document.getElementById('TxtPassword').value == ""){
                 alert('Fillup User & Password Field.')
                 return false;
             }
             return true;
+           
         }
     </script>
 </head>
@@ -48,27 +52,30 @@
 
                 </div>
                 <div class="col-12 text-center" style="padding:30px 0px">
-                    <input class="btn btn-outline-primary" type="submit" value="Login" style="width:100px;" onclick="return ValidateInput()" />
+                    <input class="btn btn-outline-primary" type="submit" value="Login" style="width:100px;" />
+                    @*<input class="btn btn-outline-primary" type="submit" value="Login" style="width:100px;" onclick="return ValidateInput()" /> NB: if this funcion is active its not working*@
+
                     <span id="spnLloginMessage"></span>
                 </div>
             </div>
 
         </div>
     }
-
-    <script>
-     var outMessage = "@ViewBag.Message";
-        var RedirectUrl = "@Url.Action("DashBoard", "Home")";
-       document.addEventListener("DOMContentLoaded", function () {
+    @*<script>
+    var outMessage = "@ViewBag.Message";
+    var RedirectUrl = "@Url.Action("DashBoard", "Home")";
+        document.addEventListener("DOMContentLoaded", function () {
         if (outMessage != "") {
             if (outMessage == "Login Success") {
                 setTimeOut(function () {
                     window.location.href = RedirectUrl;
-                }, 2000)
+                }, 1000)
             }
             document.getElementById('spnLloginMessage').innerHTML = outMessage;
         }
-    })
-    </script>
+        })
+    </script>*@
+
+
 </body>
 </html>
