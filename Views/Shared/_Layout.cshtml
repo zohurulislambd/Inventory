@@ -6,6 +6,9 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="https://code.jquery.com/ui/1.14.0-beta.2/jquery-ui.min.js" integrity="sha256-E7PeZTkHU61hmvmEMwtUMgm9Aff574wswy5F1Y0oIRA=" crossorigin="anonymous"></script>
+
+
     @{
         if (Session["User"] == null)
         {
@@ -36,17 +39,19 @@
     </nav>
     <div class="content" style="color: #fff; width: 300px; left: 0; top: 56px; position: absolute; bottom: 0px; background: rgb(33 37 41); border-top: 1px solid#000000">
         <h3>Dashboard</h3>
-        <ul>
-            <li><a href="#">Menu Item1</a></li>
-            <li><a href="#">Menu Item2</a></li>
-            <li><a href="#">Menu Item3</a></li>
-        </ul>
-        
-        <footer style="position: fixed; bottom: 0px; height: auto; left: 0px; width: 300px;">
-            <hr />
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <nav class="col-12">
+            <ul>
+                <li><a href="#">Menu Item1</a></li>
+                <li><a href="#">Menu Item2</a></li>
+                <li><a href="#">Menu Item3</a></li>
+            </ul>
+        </nav>
+
+            <footer style="position: fixed; bottom: 0px; height: auto; left: 0px; width: 300px;">
+                <hr />
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+</div>
    
     <div style="position:absolute; top:56px; right:0px; bottom:0px; left:300px; background:#f2e8e8">
     <div class="body-content" >

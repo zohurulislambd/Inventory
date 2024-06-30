@@ -23,7 +23,7 @@ namespace Inventory.Controllers
             if (String.IsNullOrEmpty(Model.UserName) || String.IsNullOrEmpty(Model.Password))
                 ViewBag.Message = "Input Needed";
 
-            if (Model.UserName == "zohurul" && Model.Password == "123")
+            if (Model.UserName == "Zohurul" && Model.Password == "123")
             {
                 Session["User"] = Model.UserName;
 

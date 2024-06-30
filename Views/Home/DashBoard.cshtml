@@ -6,12 +6,18 @@
     ViewBag.Title = "Home Page";
 }
 
+<script>
+    function ShowEqupmentEntryModal() {
+        $('#EqupMentEntryPanel').dialog();
+    }
+</script>
+
 <section>
     <div class="row">
         <div class="col col-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Equiptment List</h5>
+                    <h5 class="card-title">Equiptment List <span> <button class="btn btn-primary" id="EqupMentEntryPanel" style="float:right" onclick="return ShowEqupmentEntryModal()">+</button></span></h5>
                 </div>
                 <div class="card-body" style="height:600px;overflow-x:auto;">
                     <table class="table table-striped table-hover">
@@ -42,7 +48,7 @@
         <div class="col col-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Another List</h5>
+                    <h5 class="card-title">Product User List <span> <button class="btn btn-primary" id="EqupMentEntryPanel" style="float:right" onclick="return ShowMemberEntryModal()">+</button></span></h5>
                 </div>
                 <div class="card-body" style="height:600px;overflow-x:auto;">
                     <table class="table table-striped table-hover">
@@ -72,4 +78,5 @@
         </div>
     </div>
 </section>
+@*@Html.Partial("_PartialEquipmentEntry.cshtml")*@
     
